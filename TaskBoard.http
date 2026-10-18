@@ -1,0 +1,23 @@
+### Список задач
+GET http://localhost:5080/api/tasks
+
+### Поиск
+GET http://localhost:5080/api/tasks?search=git
+
+### Счётчики
+GET http://localhost:5080/api/tasks/stats
+
+### Создать задачу
+POST http://localhost:5080/api/tasks
+Content-Type: application/json
+
+{ "title": "Проверить API руками", "priority": "High", "dueDate": "2026-12-01" }
+
+### Перенести в «Готово» (подставьте свой id)
+PATCH http://localhost:5080/api/tasks/1/state
+Content-Type: application/json
+
+{ "state": "Done" }
+
+### Удалить
+DELETE http://localhost:5080/api/tasks/1
